@@ -1,0 +1,31 @@
+main.main
+  section.products
+    .products__body
+      h1.products__title &Pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+      .products__row
+        button.products__button.active.btn(type='button') &Vcy;&scy;&iukcy; &tcy;&ocy;&vcy;&acy;&rcy;&icy;
+        button.products__button.btn(type='button') &Vcy;&acy;&gcy;&ocy;&vcy;&acy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+        button.products__button.btn(type='button') &Fcy;&acy;&scy;&ocy;&vcy;&acy;&ncy;&acy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+      .products__filter
+        span.products__item
+          | &Vcy;&scy;&iukcy; &tcy;&ocy;&vcy;&acy;&rcy;&icy;
+          ul.products__subitem-list
+            li
+              button(type='button') &Fcy;&acy;&scy;&ocy;&vcy;&acy;&ncy;&acy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+            li
+              button(type='button') &Vcy;&acy;&gcy;&ocy;&vcy;&acy; &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+      .products__product-carts.carts-product.products-container
+        // Products generating here...
+        include products-item.pug
+
+  // Pagination
+  .products__nav-body
+    .products__navigation
+      span.not-page 1
+      a(href='#') 2
+      a(href='#') 3
+      a(href='#') 4
+      a(href='#') 5
+      span.nav-ext ...
+      a(href='#') 11
+    button.products__navigation__button.btn(type='button') &Pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&icy; &shchcy;&iecy;

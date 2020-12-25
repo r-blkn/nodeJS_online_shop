@@ -1,0 +1,331 @@
+{
+    "1" : {
+        "name": "Арахіс в какао",
+        "cost": 49.8,
+        "description": "Арахіс в какао",
+        "image": "images/goods/arahis-vkakao.webm",
+        "category": 2,
+        "weigth": 2.7,
+        "id": 5
+    },
+    "2" : {
+        "name": "Арахіс в какао",
+        "cost": 50,
+        "description": "Арахіс в какао. 60 гр.50шт. 3кг",
+        "image": "images/goods/arahis-kakao60.webm"
+    }, 
+    "3" : {
+        "name": "Арахіс в цукрі",
+        "cost": 50,
+        "description": "Арахіс в цукрі. Вага 2.9 кг",
+        "image": "images/goods/arahis-cukor.webm"
+    },
+    "4" : {
+        "name": "Арахіс солоний",
+        "cost": 50,
+        "description": "Арахіс солоний. 40гр/50шт. 2кг",
+        "image": "images/goods/arahis-solonuy.webm"
+    },
+    "5" : {
+        "name": "Арахіс в цукрі",
+        "cost": 50,
+        "description": "Арахіс в цукрі. 1/60гр. 50шт.",
+        "image": "images/goods/arahis-cukor60.webm"
+    },
+    "6" : {
+        "name": "Морські камінці",
+        "cost": 50,
+        "description": "Морські камінці. Вага 2.9кг",
+        "image": "images/goods/morski-kamintsi.webm"
+    },
+    "7" : {
+        "name": "Морські камінці",
+        "cost": 50,
+        "description": "Морські камінці. 60гр/50шт Вага 3кг",
+        "image": "images/goods/morski-kamintsi60.webm"
+    },
+    "8" : {
+        "name": "Капіточка",
+        "cost": 50,
+        "description": "Капіточка Вага 2.9 кг",
+        "image": "images/goods/kapitoshka.webm"
+    },
+    "9" : {
+        "name": "Капіточка-Доміно",
+        "cost": 50,
+        "description": "Капіточка-Доміно. Вага 2.9 кг",
+        "image": "images/goods/kapitoshka-domino.webm"
+    },
+    "10" : {
+        "name": "Цукор Пудра",
+        "cost": 50,
+        "description": "Цукор Пудра. 200 гр/20шт Вага 4 кг. НАША",
+        "image": "images/goods/cukor-pudra.webm"
+    },
+    "11" : {
+        "name": "Мятне драже",
+        "cost": 50,
+        "description": "Мятне драже. Вага 2.9 кг",
+        "image": "images/goods/miyatne.webm"
+    },
+    "12" : {
+        "name": "Мятне драже",
+        "cost": 50,
+        "description": "Мятне драже. 70гр/40шт. Вага 2.8 кг",
+        "image": "images/goods/miyatne60.webm"
+    },
+    "13" : {
+        "name": "Ядро соняшника",
+        "cost": 50,
+        "description": "Ядро соняшника. 60гр/50шт. Вага 3кг",
+        "image": "images/goods/yadro-soniayashnika.webm"
+    },
+    "14" : {
+        "name": "Фісташка солона",
+        "cost": 50,
+        "description": "Фісташка солона 45гр/60шт. Вага 2.7кг",
+        "image": "images/goods/fistashka-solona.webm"
+    },
+
+    "15" : {
+        "name": "Кольоровий горошок",
+        "cost": 50,
+        "description": "Кольоровий горошок. Вага 2.9 кг",
+        "image": "images/goods/koloroviy-goroshok.webm"
+    },
+    "16" : {
+        "name": "Цукор Пудра",
+        "cost": 50,
+        "description": "Цукор Пудра. Вага 2.5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "17" : {
+        "name": "Цукор Пудра",
+        "cost": 50,
+        "description": "Цукор Пудра 250 гр/20шт. Вага 5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "18" : {
+        "name": "Козинаки з Арахісу ",
+        "cost": 50,
+        "description": "Козинаки з Арахісу. Вага 3.5кг ",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "19" : {
+        "name": "Козинаки з Соняшника",
+        "cost": 50,
+        "description": "Козинаки з Соняшника. Вага 3.5 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "20" : {
+        "name": "Козинаки з Кунжут",
+        "cost": 50,
+        "description": "Козинаки з Кунжут. Вага 3.5 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "21" : {
+        "name": "Арахіс в Конжуті",
+        "cost": 50,
+        "description": "Арахіс в Конжуті. Вага 1.9 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "22" : {
+        "name": "Забава",
+        "cost": 50,
+        "description": "Забава. Вага 1.5 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "23" : {
+        "name": "Капітошка",
+        "cost": 50,
+        "description": "Капітошка. 60гр  1/50шт. Вага 3.0кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "24" : {
+        "name": "Какао Віко Банзай",
+        "cost": 50,
+        "description": "Какао Віко Банзай. Вага 2.4 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "25" : {
+        "name": "Крохмаль Віко Банзай",
+        "cost": 50,
+        "description": "Крохмаль Віко Банзай. 20шт. Вага 5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "26" : {
+        "name": "Родзинка",
+        "cost": 50,
+        "description": "Родзинка. 1/80гр. 50 шт.",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "27" : {
+        "name": "Мармелад",
+        "cost": 50,
+        "description": "Маомедад. Вага 1кг.",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "28" : {
+        "name": "Кукурудзяний крохмаль",
+        "cost": 50,
+        "description": "Кукурудзяний крохмаль. 20 шт. Вага 3.5 кг.",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "29" : {
+        "name": "Кругла",
+        "cost": 50,
+        "description": "Кругла. 1/20 шт 30шт. Вага 0.6 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "30" : {
+        "name": "Посипка пасхальна вагова 13",
+        "cost": 50,
+        "description": "Посипка пасхальна вагова 13",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "31" : {
+        "name": "Арахіc смажений",
+        "cost": 50,
+        "description": "Арахіc смажений 1/100",
+        "image": "images/goods/arahis-smazenyi.webm"
+    },
+    "32" : {
+        "name": "Арахіc смажений",
+        "cost": 50,
+        "description": "Арахіc смажений. Вага 5кг",
+        "image": "images/goods/arahis-smazenyi.webm"
+    },
+    "33" : {
+        "name": "Арахіс солоний",
+        "cost": 50,
+        "description":"Арахіс солоний. Вага 5кг",
+        "image": "images/goods/arahis-soloniy.webm"
+    },
+    "34" : {
+        "name": "Мак",
+        "cost": 50,
+        "description": "Мак 1/30 30шт",
+        "image": "images/goods/mak.webm"
+    },
+    "35" : {
+        "name": "Цукрова Пудра",
+        "cost": 50,
+        "description": "Цукрова Пудра 1/6кг",
+        "image": "images/goods/arahis-kakao60.webm"
+    },
+    "36" : {
+        "name": "Посипка Блиск",
+        "cost": 50,
+        "description": "Посипка Блиск. Вага 10кг",
+        "image": "images/goods/posipka-blist.webm"
+    },
+    "37" : {
+        "name": "Посипка Кольори",
+        "cost": 50,
+        "description": "Посипка Кольори. Вага 10кг",
+        "image": "images/goods/posipka-color.webm"
+    },
+
+    "38" : {
+        "name": "Кокос Віко Банзай",
+        "cost": 50,
+        "description": "Кокос Віко Банзай/ 1/40/ 25шт.",
+        "image": "images/goods/kokos-vb.webm"
+    },
+    "39" : {
+        "name": "Сухе молоко",
+        "cost": 50,
+        "description": "Сухе молоко. Вага 3.6кг. 24шт",
+        "image": "images/goods/syhe-moloko.webm"
+    },
+    "40" : {
+        "name": "Нонпарель",
+        "cost": 50,
+        "description": "Нонпарель 3Д 1.7кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "41" : {
+        "name": "Нонпарель",
+        "cost": 50,
+        "description": "Нонпарель. 3Д 10кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "42" : {
+        "name": "Какао Ранок",
+        "cost": 50,
+        "description": "Какао Ранок. 1/24шт Вага 2.4кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "43" : {
+        "name": "Крохмаль Ранок",
+        "cost": 50,
+        "description": "Крохмаль Ранок. 1/24шт. Вага 5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "44" : {
+        "name": "Цукрова Пудра Ранок",
+        "cost": 50,
+        "description": "Цукрова Пудра Ранок. 1/20шт. Вага 4кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "45" : {
+        "name": "Ізюм",
+        "cost": 50,
+        "description": "Ізюм. 1/5шт. Вага 5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "46" : {
+        "name": "Ядро",
+        "cost": 50,
+        "description": "Ядро. 1/5шт. Вага 5кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "47" : {
+        "name": "Капітошка",
+        "cost": 50,
+        "description": "Капітошка. 1/60 15шт Вага 0.9кг",
+        "image": "images/goods/kapitoshka60.webm"
+    },
+    "48" : {
+        "name": "Арахіс солоний",
+        "cost": 50,
+        "description": "Арахіс солоний",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "49" : {
+        "name": "Мятне драже",
+        "cost": 50,
+        "description": "Мятне 1/70 15шт Вага 0.6 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "50" : {
+        "name": "Морські камінці",
+        "cost": 50,
+        "description": "Морські камінці. 1/60 15 гр Вага 0.9кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "51" : {
+        "name": "Козинак з арахісу",
+        "cost": 50,
+        "description": "Козинак з арахісу. Вага 2кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "52" : {
+        "name": "Козинак з соняшника.",
+        "cost": 50,
+        "description": "Козинак з соняшника. Вага 2кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "53" : {
+        "name": "Білий Блиск",
+        "cost": 50,
+        "description": "Білий Блиск. 1/15г 100шт. 1.5 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    },
+    "54" : {
+        "name": "Шоколад Блиск",
+        "cost": 50,
+        "description": "Шоколад Блиск. 1/10г 100шт. 1 кг",
+        "image": "images/goods/arahis-kakao.webm"
+    }
+}

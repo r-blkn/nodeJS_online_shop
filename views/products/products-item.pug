@@ -1,0 +1,17 @@
+.carts-product__col
+  .carts-product__item
+    .carts-product__img
+        each val, index in goods
+            img(
+                src=val['image']
+            )
+    .carts-product__prod-name 
+        each val, index in goods
+           | #{val['name']}
+    .carts-product__text
+        each val, index in goods
+            | #{val['description']}
+    .carts-product__price
+        each val, index in goods
+            span #{val['price']} грн.
+    button.carts-product__button.btn(type='button') &Kcy;&ucy;&pcy;&icy;&tcy;&icy;
