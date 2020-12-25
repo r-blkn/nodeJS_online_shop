@@ -51,7 +51,7 @@ app.get('/products', function (req, res) {
     function(error, result) {
         if (error) throw(error)
         
-        console.log(JSON.parse(JSON.stringify(result)));
+        // console.log(JSON.parse(JSON.stringify(result)));
 
         let goods = {};
         for (let i = 0; i < result.length; i++){
