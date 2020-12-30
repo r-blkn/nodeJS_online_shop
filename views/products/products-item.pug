@@ -1,17 +1,22 @@
-.carts-product__col
-  .carts-product__item
-    .carts-product__img
-        each val, index in goods
-            img(
-                src=val['image']
-            )
-    .carts-product__prod-name 
-        each val, index in goods
-           | #{val['name']}
-    .carts-product__text
-        each val, index in goods
-            | #{val['description']}
-    .carts-product__price
-        each val, index in goods
-            span #{val['price']} грн.
-    button.carts-product__button.btn(type='button') &Kcy;&ucy;&pcy;&icy;&tcy;&icy;
+each val, index in goods
+    .carts-product__col
+        .carts-product__item
+            .carts-product__img
+                
+                img(
+                    src=val['image']
+                )
+            .carts-product__prod-name 
+                
+                | #{val['name']}
+            .carts-product__text
+                
+                | #{val['description']}
+            .carts-product__price
+                
+                span #{val['price']} грн. 
+            a.carts-product__button.btn(
+                data-products_id=val['$id']
+                type='button'
+                href='goods?id='+val['id']
+            ) Купити

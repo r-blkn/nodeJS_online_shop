@@ -1,95 +1,59 @@
+let createError = require('http-errors');
 let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+
+// -----ROUTERS ------ 
+let indexRouter = require('./routes/index');
+let aboutRouter = require('./routes/about');
+let basketRouter = require('./routes/basket');
+let contactsRouter = require('./routes/contacts');
+let deliveryRouter = require('./routes/delivery');
+let orderingRouter = require('./routes/ordering');
+let productRouter = require('./routes/product');
+let productsRouter = require('./routes/products');
+// -----ROUTERS ------ 
+
 let app = express();
 
-app.use(express.static('public'));
-//  public -где зранятса статика
-// шаблонизатор
-// 
-
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-let mysql = require('mysql');
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-let con = mysql.createPool({
-    host: 'localhost',
-    user: 'mysql',
-    password: 'mysql',
-    database: 'market'
+// -----ROUTERS PATH ------ 
+app.use('/', indexRouter);
+app.use('/about', aboutRouter);
+app.use('/basket', basketRouter);
+app.use('/contacts', contactsRouter);
+app.use('/delivery', deliveryRouter);
+app.use('/ordering', orderingRouter);
+app.use('/product', productRouter);
+app.use('/products', productsRouter);
+// -----ROUTERS PATH ------
+
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
 });
 
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
 
-app.listen(3000, function() {
-    console.log('Server listening on 3000...');
-})
-
-
-app.get('/', function(req, res) {
-    console.log('load /');
-    
-    con.query(
-        'SELECT * FROM prod',  // my sql запрос в бд
-        function(error, result) {
-            if (error) throw(error)
-            
-            console.log(JSON.parse(JSON.stringify(result)));
-            
-            res.render('index', {
-                result: JSON.parse(JSON.stringify(result))
-            })
-        
-        }
-    )
-
-    
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
 });
 
-app.get('/products', function (req, res) {
-   console.log('/products');
-
-   con.query(
-    'SELECT * FROM prod',  // my sql запрос в бд
-    function(error, result) {
-        if (error) throw(error)
-        
-        // console.log(JSON.parse(JSON.stringify(result)));
-
-        let goods = {};
-        for (let i = 0; i < result.length; i++){
-            goods[result[i]['id']] = result[i];
-        }
-        console.log(JSON.parse(JSON.stringify(goods)));
-        
-        res.render('products', {
-            goods: JSON.parse(JSON.stringify(goods))
-        })
-    
-    }
-)
-
-
-
-
-});
-
-
-app.get('/сat', function (req, res) {
-    
-    console.log(req.query.id);
-    let catId = req.query.id;
-    res.render('cat', {})
-    con.query(
-        'SELECT * FROM category WHERE id='+catId,
-        function(error, result) {
-            if (error) throw err;
-            console.log(JSON.parse(JSON.stringify(o)));
-        }
-    )
-
-    res.render('index');
-})
-
-app.get('/product', function (req, res) {
-    console.log('Product');
-})
+module.exports = app;
 
 

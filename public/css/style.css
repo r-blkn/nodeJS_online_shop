@@ -832,6 +832,8 @@ body {
 	vertical-align: middle;
 }
 
+
+
 .num {
 	display: inline-block;
 	text-align: center;
@@ -1295,8 +1297,8 @@ body {
 }
 
 .carts-product__img {
-	width: 88%;
-	height: auto;
+	width: 95%;
+	height: 200px;
 	margin: 7px auto 5px;
 }
 
@@ -1377,6 +1379,10 @@ body {
 .products__navigation a:hover {
 	background-color: rgba(255, 51, 70, 0.8);
 	color: #fff;
+}
+
+pre {
+	margin-top: 140px;
 }
 
 .not-page {

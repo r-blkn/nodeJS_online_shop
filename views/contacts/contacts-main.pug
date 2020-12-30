@@ -1,0 +1,34 @@
+main.main
+  section.contacts
+    .container-big
+      .contacts__body
+        h1.contacts__title Контакти
+        .contacts__row.row-contacts
+          .row-contacts__item
+            img.row-contacts__img(src="images/footer/phone.svg" alt="phone")
+            h4.row-contacts__title Телефон
+            p.row-contacts__text +380 98 7770 144
+            p.row-contacts__text +380 98 7770 144
+          .row-contacts__item
+            img.row-contacts__img(src="images/footer/adress.svg" alt="phone")
+            h4.row-contacts__title Адреса
+            p.row-contacts__text вулиця Стрийська, 96, Львів, Львівська область, 79000
+          .row-contacts__item
+            img.row-contacts__img(src="images/footer/email.svg" alt="phone")
+            h4.row-contacts__title Пошта
+            p.row-contacts__text vikobanzay@gmail.com
+        h2.contacts__subtitle Зворотній зв'язок
+        p.contacts__feedback Виникли запитання? Напишіть нам
+        .contacts__feedback-form.form-feedback
+          form.form-feedback__form(action="/" method="POST")
+            label(for="name") Ваше імя
+            input#name(type="text" placeholder="Ваше ім'я" name="name" value="")
+            label(for="phone") Ваш телефон
+            input#phone(type="tel" placeholder="Ваш телефон" name="phone" value="")
+            label(for="message") Ваше повідомлення
+            textarea#message(placeholder="Ваше повідомлення" name="message" value="")
+            button.form-feedback__button.btn(type="button") Відправити
+          .form-feedback__img
+            img(src="images/contacts/ask.png")
+  .map
+    iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16355.076277157708!2d24.122379258164795!3d49.79052026254909!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDQ3JzE5LjMiTiAyNMKwMDcnNDIuOCJF!5e0!3m2!1sru!2sua!4v1607957005810!5m2!1sru!2sua" width="800" height="306" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0")

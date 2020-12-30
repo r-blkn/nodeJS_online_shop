@@ -1,40 +1,39 @@
 header.header
   .container-big
     .header__row
-      a.header__logo(href='index.html')
-        img(src='images/Logo.svg', alt='Logo')
+      a.header__logo(href="/")
+        img(src="images/Logo.svg" alt="Logo")
       .header__burger
         span
       .header__right
         nav.header__menu
           ul.header__list
             li
-              a.header__link(href='about-us.html') &Pcy;&rcy;&ocy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&iukcy;&yucy;
+              a.header__link(href="/about") Про компанію
             li
-              a.header__link.header__link-sub(href='products.html') &Pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+              a.header__link.header__link-sub(href="/products") Продукція
               ul.submenu
                 li.submenu__item
-                  a.submenu__link(href='products.html') &Vcy;&scy;&iukcy; &tcy;&ocy;&vcy;&acy;&rcy;&icy;
+                  a.submenu__link(href="/products") Всі товари
                 li.submenu__item
-                  a.submenu__link(href='products.html')
-                    | &Vcy;&acy;&gcy;&ocy;&vcy;&acy;
-                    | &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+                  a.submenu__link(href="/products")
+                    | Вагова
+                    | продукція
                 li.submenu__item
-                  a.submenu__link(href='products.html')
-                    | &Fcy;&acy;&scy;&ocy;&vcy;&acy;&ncy;&acy;
-                    | &pcy;&rcy;&ocy;&dcy;&ucy;&kcy;&tscy;&iukcy;&yacy;
+                  a.submenu__link(href="/products")
+                    | Фасована
+                    | продукція
             li
-              a.header__link(href='delivery-and-payment.html') &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy; &iukcy; &ocy;&pcy;&lcy;&acy;&tcy;&acy;
+              a.header__link(href="/delivery") Доставка і оплата
             li
-              a.header__link(href='contacts.html') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&icy;
+              a.header__link(href="/contacts") Контакти
         .header__contacts
           .search
-            button.search__button.header__btn(type='button')
-              img(src='images/search.png', alt='Пошук')
-            input.search__input(type='text')
-          button.header__basket-btn.header__btn(type='button')
-            img(src='images/basket.png', alt='Корзина')
-            span 1
-          a.header__phone-btn.header__btn(href='tel:+380984491158')
-            img(src='images/phone.png', alt='Телефон')
-          span.phone-num +380 98 4491 158
+            button.search__button.header__btn(type="button")
+              img(src="images/search.png" alt="Пошук")
+            input.search__input(type="text")
+          button.header__basket-btn.header__btn(type="button")
+            img(src="images/basket.png" alt="Корзина")
+          a.header__phone-btn.header__btn(href="tel:+380987770144")
+            img(src="images/phone.png" alt="Телефон")
+          span.phone-num +380 98 7770 144

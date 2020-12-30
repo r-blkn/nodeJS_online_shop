@@ -1,0 +1,139 @@
+main.main
+  section.products
+    .products__body
+      h1.products__title Продукція
+      .products__row
+        button.products__button.btn(type="button") Всі товари
+        button.products__button.btn(type="button") Вагова продукція
+        button.products__button.active.btn(type="button") Фасована продукція
+      .products__filter
+        span.products__item
+          | Всі товари
+          ul.products__subitem-list
+            li
+              button(type="button") Фасована продукція
+            li
+              button(type="button") Вагова продукція
+      .products__product.product
+        .product__row
+          .product__slider__body
+            .slider
+              .product-slider.swiper-container
+                .product-slider__wrapper.swiper-wrapper
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-slide.swiper-slide
+                    .product-slider__image
+                      img(src="images/product-photo.png" alt="")
+                .product-slider-button-prev
+                .product-slider-button-next
+              .product-mini-slider.swiper-container
+                .product-mini-slider__wrapper.swiper-wrapper
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+                  .product-mini-slide.swiper-slide
+                    .product-mini-slider__image
+                      img(src="images/product-photo.png" alt="")
+          .product__about
+            h2.product__name Лимонна кислота
+            p.product__company Тов “Віко Банзай”
+            p.product__price 45 грн.
+            .product__text
+              p
+                | Tellus id feugiat vel aliquet nisi convallis aenean nam bibendum pretium ipsum massa pharetra nisi blandit lacus libero vulputate quis risus pretium, sit feugiat sed a, ultricies quis consectetur in diam pellentesque sem eget egestas lectus nulla massa proin congue
+            h3.product__wholesale-price Оптова ціна
+            .wholesale-price
+              .wholesale-price__item
+                span.wholesale-price__count 1-10
+                span.wholesale-price__price 45 грн
+              .wholesale-price__item
+                span.wholesale-price__count 1-10
+                span.wholesale-price__price 45 грн
+              .wholesale-price__item
+                span.wholesale-price__count 1-10
+                span.wholesale-price__price 45 грн
+              .wholesale-price__item
+                span.wholesale-price__count 1-10
+                span.wholesale-price__price 45 грн
+              .wholesale-price__item
+                span.wholesale-price__count 1-10
+                span.wholesale-price__price 45 грн
+            .product__count
+              .product__buttons
+                button.product__btn-minus
+                  img(src="images/products/minus.png")
+                span.product__num.num 2
+                button.product__btn-plus
+                  img(src="images/products/plus.png")
+              .product__sum-price
+                span 90
+                |  грн
+            button.product__button-buy.btn(type="button") Купити
+            button.product__button-add.btn(type="button") Добавити в корзину
+        .product__info.product-info
+          .product-info__col.red-col
+            img(src="images/products/packaging.png")
+            | 						Упаковка
+          .product-info__col.black-col
+            | Пластиковий стакан
+          .product-info__col.red-col
+            img(src="images/products/bar-code.png")
+            | 						Штрих код
+          .product-info__col.black-col
+            | 4820006532161
+          .product-info__col.red-col
+            img(src="images/products/mass.png")
+            | 						Маса нетто
+          .product-info__col.black-col
+            | 300 г
+          .product-info__col.red-col
+            img(src="images/products/size.png")
+            | 						Розмір упаковки
+          .product-info__col.black-col
+            | 9,5 × 9,0 см
+          .product-info__col.red-col
+            img(src="images/products/time.png")
+            | 						Строк зберігання
+          .product-info__col.black-col
+            | 14 діб
+          .product-info__col.red-col
+            img(src="images/products/size-box.png")
+            | 						Розмір ящика
+          .product-info__col.black-col
+            | 38,0 × 27,8 × 13,5 см
+          .product-info__col.red-col
+            img(src="images/products/temperature.png")
+            | 						Умови зберігання
+          .product-info__col.black-col
+            | За температури 0... + 6 °С
+          .product-info__col.red-col
+            img(src="images/products/box.png")
+            | 						Кількість у ящику
+          .product-info__col.black-col
+            | 12 штук

@@ -1,0 +1,11 @@
+include components/head.pug
+
+.wrapper
+    include components/header.pug
+   
+    block content
+      h1= message
+      h2= error.status
+      pre #{error.stack}
+      
+    include components/footer.pug
