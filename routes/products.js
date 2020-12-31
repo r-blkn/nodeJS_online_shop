@@ -11,30 +11,48 @@ let con = mysql.createPool({
 });
 
 
-// Products page
 router.get('/', function (req, res) {
-    console.log('/products');
- 
-    con.query(
-     'SELECT * FROM prod',  // my sql запрос в бд
-     function(error, result) {
-         if (error) throw(error)
-         
-         // console.log(JSON.parse(JSON.stringify(result)));
- 
-         let goods = {};
-         for (let i = 0; i < result.length; i++){
-             goods[result[i]['id']] = result[i];
-         }
-        //  console.log(JSON.parse(JSON.stringify(goods)));
-         console.log(JSON.parse(JSON.stringify(result.id)));
-         res.render('products', {
-             title: 'Віко Банзай товари',
-             goods: JSON.parse(JSON.stringify(result))
-         });
-     });
+    console.log(req.query.id);
+
+    let catId = req.query.id;
+  
+    let cat = new Promise(function(resolve, reject){
+      con.query(
+        'SELECT * FROM category WHERE id='+catId,
+        function(error, result){
+          if (error) reject(error);
+          resolve(result);
+        });
+    });
+
+    let goods = new Promise(function(resolve, reject){
+      con.query(
+        'SELECT * FROM prod WHERE category='+catId,
+        function(error, result){
+          if (error) reject(error);
+          resolve(result);
+        });
+    });
+
+    let products = new Promise(function(resolve, reject) {
+        con.query(
+            'SELECT * FROM prod',  // my sql запрос в бд
+            function(error, result) {
+                if (error) reject(error)
+                
+                // console.log(result);
+                res.render('products', {
+                    title: 'Віко Банзай товари',
+                    goods: result
+                });
+            });
+    });
+  
+    Promise.all([cat, goods, products])
+        .then(function(value){
+            console.log(value[0])
+        });
 
 });
-
 
 module.exports = router;

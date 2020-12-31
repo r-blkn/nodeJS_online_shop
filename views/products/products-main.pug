@@ -4,25 +4,11 @@ main.main
       h1.products__title Продукція
       //- category generating here...
       include products-category.pug
-
-      .products__filter
-        span.products__item
-          | Всі товари
-          ul.products__subitem-list
-            li
-              button.kozinak(type="button") Козинаки
-            li
-              button.draze(type="button") Драже
-            li
-              button.snek(type="button") Снеки
-            li
-              button.bakalia(type="button") Бакалія
-            li
-              button.prikrasa(type="button") Прикраса кондитерська
               
       #goods.products__product-carts.carts-product.products-container
         // products generating here
-        include products-item.pug
+        each val, index in goods
+          include products-item.pug
         
   // Pagination
   .products__nav-body

@@ -1,22 +1,21 @@
-each val, index in goods
-    .carts-product__col
-        .carts-product__item
-            .carts-product__img
-                
-                img(
-                    src=val['image']
-                )
-            .carts-product__prod-name 
-                
-                | #{val['name']}
-            .carts-product__text
-                
-                | #{val['description']}
-            .carts-product__price
-                
-                span #{val['price']} грн. 
-            a.carts-product__button.btn(
-                data-products_id=val['$id']
-                type='button'
-                href='goods?id='+val['id']
-            ) Купити
+.carts-product__col
+    .carts-product__item
+        .carts-product__img
+            
+            img(
+                src=val['image']
+            )
+        .carts-product__prod-name 
+            
+            | #{val['name']}
+        .carts-product__text
+            
+            | #{val['description']}
+        .carts-product__price
+            
+            span #{val['price']} грн. 
+        a.carts-product__button.btn(
+            data-products_id=val['id']
+            type='button'
+            href='goods?id='+val['id']
+        ) Купити

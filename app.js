@@ -13,9 +13,19 @@ let deliveryRouter = require('./routes/delivery');
 let orderingRouter = require('./routes/ordering');
 let productRouter = require('./routes/product');
 let productsRouter = require('./routes/products');
+// let categoryRouter = require('./routes/category-list');
 // -----ROUTERS ------ 
 
 let app = express();
+
+let mysql = require('mysql');
+
+let con = mysql.createPool({
+    host: 'localhost',
+    user: 'mysql',
+    password: 'mysql',
+    database: 'market'
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -34,7 +44,7 @@ app.use('/basket', basketRouter);
 app.use('/contacts', contactsRouter);
 app.use('/delivery', deliveryRouter);
 app.use('/ordering', orderingRouter);
-app.use('/product', productRouter);
+app.use('/goods', productRouter);
 app.use('/products', productsRouter);
 // -----ROUTERS PATH ------
 
@@ -54,6 +64,33 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+
+
+// app.post('/get-category-list', function (req, res) {
+//   // console.log(req.body);
+//   con.query(
+//     'SELECT * FROM category',
+//     function (error, result, fields) {
+//       if (error) throw error;
+
+//       console.log('RESULT:', result);
+//       res.json(result);
+//   });
+
+// });
+
+app.post('/get-goods-info', function (req, res) {
+  console.log(req.body);
+  // con.query(
+  //   'SELECT id, category FROM category',
+  //   function (error, result, fields) {
+  //     if (error) throw error;
+
+  //     console.log('RESULT:', result);
+  //     res.json(result);
+  // });
+
+});
+
 module.exports = app;
-
-

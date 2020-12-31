@@ -1,7 +1,21 @@
-.products__row
+.products__row#category-list
   button.products__button.active.btn(type="button") Всі товари
   button.products__button.btn.kozinak(type="button") Козинаки
   button.products__button.btn.draze(type="button") Драже
   button.products__button.btn.snek(type="button") Снеки
   button.products__button.btn.bakalia(type="button") Бакалія
-  button.products__button.btn.prikrasa(type="button") Прикраса кондитерська
+  button.products__button.btn.prikrasa(type="button") Посипка
+.products__filter
+        span.products__item#category-list
+          | Всі товари
+        //-   ul.products__subitem-list
+        //-     li
+        //-       a.kozinak(type="button") Козинаки
+        //-     li
+        //-       a.draze(type="button") Драже
+        //-     li
+        //-       a.snek(type="button") Снеки
+        //-     li
+        //-       a.bakalia(type="button") Бакалія
+        //-     li
+        //-       a.prikrasa(type="button") Прикраса кондитерська

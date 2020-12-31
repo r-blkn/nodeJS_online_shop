@@ -1,0 +1,46 @@
+.basket-pop-pup
+  .basket-pop-pup__body
+    .basket-pop-pup__basket
+      img(src='images/products/basket.png')
+      span Кошик
+    .basket-pop-pup__item
+      button.basket-pop-pup__close
+        img(src='images/products/dagger.png')
+      .basket-pop-pup__top
+        .basket-pop-pup__img
+          img(src='images/product-photo.png')
+        .basket-pop-pup__content
+          h2.basket-pop-pup__title Лимонна кислота
+          .basket-pop-pup__text
+            p
+              | Tellus id feugiat vel aliquet nisi convallis aenean nam bibendum pretium ipsum massa pharetra nisi blandit libero vulputate quis risus pretium, aliquet nisi aenean nam bibendum pretium
+      .basket-pop-pup-bottom
+        .basket-pop-pup__count
+          .basket-pop-pup__count-inner.prod-count
+            button.basket-pop-pup__btn-minus.btn-minus
+            span.basket-pop-pup__num.num 2
+            button.basket-pop-pup__btn-plus.btn-plus
+        .basket-pop-pup__price.body-basket__price
+          span 90
+          |  грн
+    .basket-pop-pup__buttons
+      a.basket-pop-pup__link(href='#') Продовжити покупку
+      a.basket-pop-pup__button.btn(type='button' href='/ordering') Оформити замовлення
+.basket-empty
+  .basket-empty__body
+    .basket-empty__text
+      img(src='images/products/basket.png')
+      span Ваш кошик пустий
+    button.basket-empty__button.btn(type='button') Підтвердити замовлення
+    a.basket-empty__link(href='#') Перейти в коризну
+.basket-full
+  .basket-empty__body
+    .basket-full__text
+      img(src='images/products/basket.png')
+      span У кошику 2 товара
+      p
+        | На сумму 
+        span.basket-full__sum 90
+        |  грн
+    button.basket-empty__button.btn(type='button') Підтвердити замовлення
+    a.basket-empty__link(href='#') Перейти в коризну
