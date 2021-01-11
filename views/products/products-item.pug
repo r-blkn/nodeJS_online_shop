@@ -14,8 +14,9 @@
         .carts-product__price
             
             span #{val['price']} грн. 
-        a.carts-product__button.btn(
+        a.carts-product__button.btn.add-to-cart(
             data-products_id=val['id']
             type='button'
             href='goods?id='+val['id']
         ) Купити
+       

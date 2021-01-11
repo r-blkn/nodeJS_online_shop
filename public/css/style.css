@@ -475,7 +475,7 @@ body {
 
 .about-us__image img{
 	width: 100%;
-	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+	/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); */
 	border-radius: 50px;
 }
 
@@ -959,11 +959,14 @@ body {
 
 .row-about--us__img {
 	width: 350px;
-	height: 320px;
+	height: auto;
 	background: #C4C4C4;
 	border-radius: 50px;
 	margin-right: 33px;
 	overflow: hidden;
+}
+.row-about--us__img img {
+	width: 100%;
 }
 
 .row-about--us__text, 
@@ -1671,13 +1674,18 @@ pre {
 
 .basket-pop-pup__body {
 	width: 645px;
-	height: 319px;
+	max-height: 85vh;
 	background: url("../images/products/pop-pup-bg.png") no-repeat #EEEEEE;
 	border-radius: 50px;
 	overflow: hidden;
 	padding: 62px 95px 37px 53px;
 	position: relative;
+	overflow: scroll;
 }
+
+.basket-pop-pup__body::-webkit-scrollbar {
+	width: 0;
+  }
 
 .basket-pop-pup__basket {
 	position: absolute;
@@ -1687,6 +1695,7 @@ pre {
 	font-size: 14px;
 	line-height: 17px;
 	color: #333333;
+	width: 85%;
 }
 
 .basket-pop-pup__basket img {
@@ -1709,6 +1718,7 @@ pre {
 	right: 0;
 	z-index: 2;
 	background: transparent;
+	margin-left: auto;
 }
 
 .basket-pop-pup__top {
@@ -1783,6 +1793,12 @@ pre {
 	font-size: 12px;
 	line-height: 14px;
 	color: #FF3346;
+	cursor: pointer;
+}
+
+.basket-open {
+	visibility: visible;
+	opacity: 1;
 }
 
 .basket-pop-pup__link:hover {
@@ -1821,11 +1837,13 @@ pre {
 .basket-empty__text,
 .basket-full__text {
 	font-weight: 400;
-	font-size: 14px;
+	font-size: 15px;
 	line-height: 16px;
-	text-align: center;
+	text-align: left;
+	margin: 0 0 10px 0;
 	color: #000000;
 }
+
 
 .basket-empty__text > span,
 .basket-full__text > span {
@@ -1847,6 +1865,15 @@ pre {
 	font-size: 12px;
 	line-height: 14px;
 	color: #FF3346;
+}
+
+
+.span-total {
+	font-weight: 700;
+    font-size: 14px;
+    line-height: 29px;
+	color: #FF3346;
+	margin-left: 0;
 }
 
 .basket-empty__link:hover {
@@ -2491,7 +2518,11 @@ pre {
 	}
 	.image-slider__text p {
 		text-align: center;
-	}
+		color: #fff;
+		text-shadow: 0px 4px 3px rgba(0,0,0,0.4),
+             		0px 8px 13px rgba(0,0,0,0.1),
+             		0px 18px 23px rgba(0,0,0,0.1);
+				}
 
 	.image-slider__button {
 		display: block;
@@ -3520,6 +3551,10 @@ pre {
 		margin: 7px 0;
 		font-size: 18px;
 		line-height: 24px;
+	}
+
+	.basket-empty__text > span, .basket-full__text > span {
+		margin-left: 0;
 	}
 
 	.body-basket__img {

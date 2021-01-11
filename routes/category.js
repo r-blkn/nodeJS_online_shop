@@ -12,8 +12,7 @@ let con = mysql.createPool({
 
 
 router.get('/', function (req, res) {
-    // console.log(req.query.id);
-
+    console.log(req.query.id);
     let catId = req.query.id;
   
     let cat = new Promise(function(resolve, reject){
@@ -34,23 +33,22 @@ router.get('/', function (req, res) {
         });
     });
 
-    let products = new Promise(function(resolve, reject) {
-        con.query(
-            'SELECT * FROM prod',  // my sql запрос в бд
-            function(error, result) {
-                if (error) reject(error)
+    // let products = new Promise(function(resolve, reject) {
+    //     con.query(
+    //         'SELECT * FROM prod',  // my sql запрос в бд
+    //         function(error, result) {
+    //             if (error) reject(error)
                 
-                // console.log(result);
-                res.render('products', {
-                    title: 'Віко Банзай',
-                    goods: result
-                });
-            });
-    });
+    //             //  
+    //         });
+    // });
   
-    Promise.all([cat, goods, products])
-        .then(function(value){
-            console.log(value[0])
+    Promise.all([cat, goods])
+        .then(function(value){ v
+            res.render('products', {
+                cat: JSON.parse(JSON.stringify(value[0])),
+                goods: JSON.parse(JSON.stringify(value[1]))
+              });
         });
 
 });
