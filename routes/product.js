@@ -12,6 +12,12 @@ let con = mysql.createPool({
     password: 'mysql',
     database: 'market'
 });
+// let con = mysql.createPool({
+//   host: 'localhost',
+//   user: 'a0500445_viko',
+//   password: 'ak3NCcmv',
+//   database: 'a0500445_market'
+// });
 
 /* GET home page. */
 router.get('/', function(req, res, next) {  

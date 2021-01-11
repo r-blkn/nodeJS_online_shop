@@ -19,7 +19,6 @@ let productsRouter = require('./routes/products');
 
 let app = express();
 
-
 app.listen(80);
 
 let mysql = require('mysql');
@@ -30,6 +29,12 @@ let con = mysql.createPool({
     password: 'mysql',
     database: 'market'
 });
+// let con = mysql.createPool({
+//   host: 'localhost',
+//   user: 'a0500445_viko',
+//   password: 'ak3NCcmv',
+//   database: 'a0500445_market'
+// });
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -64,31 +69,19 @@ app.post('/get-category-list', function (req, res) {
       console.log('RESULT:', result);
       res.json(result);
   });
-
 });
 
 app.post('/get-goods-info', function (req, res) {
-  console.log(req.body.key);
-  if (req.body.key.length != 0) {
-    con.query('SELECT * FROM prod WHERE id IN ('+req.body.key.join(',')+')',
-      function (error, result, fields) {
-        if (error) throw error;
-  
-        let goods = {};
-  
-        for (let i = 0; i < result.length; i++) {
-          goods[result[i]['id']] = result[i];
-        }
-        res.json(goods);
-    });
-  } 
-  else {
-    res.send('0');
-  }
+  console.log(req.body.key);  
+  con.query(
+    'SELECT * FROM prod WHERE id IN ('+req.body.key.join(',')+')',
+    function (error, result, fields) {
+      if (error) throw error;
+
+      res.json(result);
+  });
 
 });
-
-
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
