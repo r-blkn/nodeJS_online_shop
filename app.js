@@ -77,6 +77,11 @@ app.post('/get-goods-info', function (req, res) {
     'SELECT * FROM prod WHERE id IN ('+req.body.key.join(',')+')',
     function (error, result, fields) {
       if (error) throw error;
+      let goods = {};
+
+      for (let i = 0; i < result.length; i++){
+        goods[result[i]['id']] = result[i];
+      }
 
       res.json(result);
   });
