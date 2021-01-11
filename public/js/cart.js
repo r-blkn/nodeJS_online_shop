@@ -29,6 +29,11 @@ cartBtn.forEach(function(el) {
     el.addEventListener('click', addToCart);
 })
 
+if (localStorage.getItem('cart')) {
+    cart = JSON.parse(localStorage.getItem('cart'));
+    ajaxGetGoodsInfo();
+}
+
 function addToCart() {
     let goodsId = this.dataset.goods_id;
     console.log('goodsId: ', goodsId);
@@ -44,6 +49,8 @@ function addToCart() {
 }  
 
 function ajaxGetGoodsInfo() {
+    updateLocalStorageCart();
+
     fetch('/get-goods-info', {
         method: 'POST',
         body: JSON.stringify({key: Object.keys(cart)}),
@@ -56,17 +63,17 @@ function ajaxGetGoodsInfo() {
         return response.text();
     })
     .then(function(body) {
-        // console.log(body);
-        console.log(JSON.parse(body));
+        console.log(body);
         showCart(JSON.parse(body));
     })
 }
 
 function showCart(data) {
+    
     let out=` `;
-
+    
     let total = 0;
-
+    
     for (let key in cart) {
         out += `<div class="basket-pop-pup__item">
             <div class="basket-pop-pup__top">
@@ -98,4 +105,33 @@ function showCart(data) {
     out += `<div class="basket-pop-up__total basket-full__text">Загальна вартість <span class="span-total">${total.toFixed(2)} грн.</span></div>`;
     document.querySelector('#basket-pop-pup__item').innerHTML = out;
 
+    document.querySelectorAll('.btn-plus').forEach( function(el) {
+        el.addEventListener('click', cartPlus);
+    });
+    document.querySelectorAll('.btn-minus').forEach( function(el) {
+        el.addEventListener('click', cartMinus);
+    });    
+
+}
+
+function cartPlus() {
+    let goodsId = this.dataset.goods_id;
+    cart[goodsId]++;
+
+    ajaxGetGoodsInfo();
+}
+
+function cartMinus() {
+    let goodsId = this.dataset.goods_id;
+    if (cart[goodsId] - 1 > 0) {
+        cart[goodsId]--;
+    } else {
+        delete(cart[goodsId]);
+    }
+
+    ajaxGetGoodsInfo();
+}
+
+function updateLocalStorageCart() {
+    localStorage.setItem('cart', JSON.stringify(cart));
 }
