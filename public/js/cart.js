@@ -63,7 +63,6 @@ function ajaxGetGoodsInfo() {
         return response.text();
     })
     .then(function(body) {
-        console.log(body);
         showCart(JSON.parse(body));
     })
 }

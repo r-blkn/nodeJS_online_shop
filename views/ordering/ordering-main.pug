@@ -3,7 +3,7 @@ main.main
     .ordering__body
       h1.ordering__title Оформлення замовлення
       .ordering__row
-        form.ordering__form.form-ordering(action="/")
+        form.ordering__form.form-ordering#order-form(action="")
           h2.form-ordering__title.conact-data Ваші контактні дані
           .form-ordering__item
             .form-ordering__col
@@ -16,10 +16,10 @@ main.main
             .form-ordering__col
               label(for="phone") Ваш телефон
               input#phone(type="tel" placeholder="Ваш телефон" name="phone" value="")
-              img.col-eror(src="images/ordering/eror.png")
-              .form-ordering__error
-                img(src="images/ordering/eror.png")
-                | 								Невірний формат телефону
+              //- img.col-eror(src="images/ordering/eror.png")
+              //- .form-ordering__error
+              //-   img(src="images/ordering/eror.png")
+              //-   | 								Невірний формат телефону
             .form-ordering__col
               label(for="e-mail") Ваша пошта
               input#e-mail(type="text" placeholder="Ваш e-mail" name="e-mail" value="")
@@ -29,7 +29,7 @@ main.main
               img(src="images/ordering/new-post.png")
               | 							Нова пошта
             .form-ordering__list
-              input#text-test(type="text" placeholder="Відділення" name="department" value="")
+              input#nova(type="text" placeholder="Відділення" name="department" value="")
               img.form-ordering__image(src="images/ordering/arrow.png")
               ul.form-ordering__sublist
                 li
@@ -43,7 +43,7 @@ main.main
               img(src="images/ordering/ukr-post.png")
               | 							Укр пошта
             .form-ordering__list
-              input(type="text" placeholder="Відділення" name="department" value="")
+              input#ukr(type="text" placeholder="Відділення" name="department" value="")
               img.form-ordering__image(src="images/ordering/arrow.png")
               ul.form-ordering__sublist
                 li
@@ -54,25 +54,21 @@ main.main
                   button(type="button") Відділення 3
           h2.form-ordering__title Оплата
           .form-ordering__item.item-radio
+
             .item-radio__inner
+              //- button#payment Передоплата 30%
               input#payment(type="radio" name="payment" value="30")
               label(for="payment") Передоплата 30%
             .item-radio__inner
+              //- button#payment Передоплата 100%
               input#payment2(type="radio" name="payment" value="100" checked="")
               label(for="payment2") Передоплата 100%
+          #rule
+            .item-radio__inner
+              input#ruleradio(type="radio" name="ruleradio" value="1")
+              label(for="ruleradio") Згоден на обробку персональних даних.
+          .submit
+            button#submit.cart-ordering__button.btn(type="submit") Підтвердити
         .ordering__cart.cart-ordering
-          .cart-ordering__body
-            .cart-ordering__img
-              img(src="images/product-photo.png" alt="")
-            h2.cart-ordering__name Лимонна кислота
-            .cart-ordering__text
-              p
-                | 2 товари на сумму:
-              span 90 грн.
-            .cart-ordering__text
-              p
-                | Вартість доставки:
-              span 45 грн.
-            p.cart-ordering__to-pay До сплати:
-            p.cart-ordering__price 135 грн.
-            button.cart-ordering__button.btn(type="button") Підтвердити
+          .cart-ordering__body#basket-pop-pup__item
+            
